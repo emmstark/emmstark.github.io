@@ -1,0 +1,15 @@
+* {margin:0; padding:0;}
+
+html {scroll-behavior:smooth;}
+
+h1{
+    text-align: center;
+}
+body{
+    margin: 0px;
+}
+.navbar ul{
+   
+    top: 0;
+    position: sticky;
+}
