@@ -1,33 +1,463 @@
-<DOCTYPE html>
+<!DOCTYPE html>
     <html lang="en">
 
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JAX Apparel</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JAX Apparel</title>
+       <link rel="preload" href="style.css" as="style"
+       onload="this.rel='stylesheet'"> 
+       <noscript><link rel="stylesheet" href="/style.css">
+    </noscript>
+    </head>  
+    <body>
 
-    <h1>Jax Apparel</h1>
- 
-<nav class="navbar">
+<header id="header">
+    <a href="/" class="logo">JAX APPAREL</a>
+    <ul class="nav">
+        <li>
+            <a href="#" onclick="scrollToTop();"
+            ><ion-icon name="home-outline"></ion-icon></a>
+        </li>
+        <li><a href="#omoss">om oss</a></li>
+        <li><a href="#myid>">shopping</a></li>
+        <li><a href="#kontaktaoss">kontakta oss</a></li> 
+    </ul>
+    <ul class="util">
+        <li>
+            <a href="#"><ion-icon name="search-outline"></ion-icon></a>
+        </li>
+        <li>
+            <a href="#"><ion-icon name="person-outline"></ion-icon></a>
+        </li>
+        <li>
+            <a href="#"><ion-icon name="heart-outline"></ion-icon></a>
+        </li>
+        <li>
+            <a href="#"><ion-icon name="bag-outline"></ion-icon></a>
+            <span class="number">8</span>
+        </li>
+    </ul>
+<a href="#" class="menu" onclick="toggleMenu();"
+><ion-icon name="apps-outline"></ion-icon
+    ></a>
+</header>
 
-            <ul>
-                 <li><a href="index.html">Home</a></li> 
-                 <li><a href="herr.html">Herr</a></li> 
-                 <li><a href="dam.html">Dam</a></li>   
-                 <li><a href="barn.html">Barn</a></li>  
-            </ul>
-       </nav>
+<ul class="nav-mobile">
+    <li>
+        <a href="#" onclick="scrollToTop();"
+    ><ion-icon name="home-outline"></ion-icon
+        ></a>
+    </li>
+    <li><a href="#omoss" onclick="toggleMenu();">om oss</a></li>
+        <li><a href="#myid>" onclick="toggleMenu();">shopping</a></li>
+            <li><a href="#kontaktaoss" onclick="toggleMenu();">kontakta oss</a></li>
+</ul>
+
+
+<div id="banner" class="banner">
+    <!--left part-->
+   <div class="women">
+    <img src="photos/womenn.jpg" alt="tjej med outfit">
+    <a href="#" class="switch-btn" onclick="switchBanner('left');">Dam</a>
+    <div class="div content">
+        <h1>Dammode</h1>
+        <p>Hos Jax Apparel kan du köpa damkläder för ett bra pris med topp kvalite! Vi erbjuder bra och bekvämt material.
+        </p>
+        <a href="#myid>">Shoppa vidare <ion-icon name="cart-outline"></ion-icon></a>
+    </div>
+   </div>
+   <!--middle part-->
+   <div class="men">       
+    <img src="photos/men.jpg" alt="kille med outfit">
+    <a href="#" class="switch-btn" onclick="switchBanner('middle');">Herr</a>
+     <div class="div content">
+        <h1>Män med smak</h1>
+        <p>Hos Jax Apparel kan du köpa herrkläder för ett bra pris med topp kvalite! Vi erbjuder bra och bekvämt material.
+        </p>
+        <a href="#myid>">Shoppa vidare <ion-icon name="cart-outline"></ion-icon></a>
+    </div>
+   </div>
+   <!--right part-->
+   <div class="child">
+    <img src="photos/child1.jpg" alt="barn med outfit">
+    <a href="#" class="switch-btn" onclick="switchBanner('right');">Barn</a>
+    <div class="div content">
+        <h1>Väx med stil</h1>
+        <p>Väx med stil hos oss! Hos Jax Apparel kan du köpa barnkläder för ett bra pris med topp kvalite! Vi erbjuder bra och bekvämt material.
+        </p>
+        <a href="#myid>">Shoppa vidare <ion-icon name="cart-outline"></ion-icon></a>
+    </div>
+   </div>
+   <a href="#" class="reset" onclick="resetBanner();"
+   ><ion-icon name="power-outline"></ion-icon></a>
+</div>
+<!--main-->
 <main>
-    <h3>this is the home page</h3>
+<!--call up-->
+<section class="call-up">
+    <div class="call-up-box">
+        <ion-icon name="send-outline"></ion-icon>
+        <div>
+            <h4>Gratis Frakt</h4>
+            <p>
+                Gratis frakt på dona två första köp över $30!
+            </p>
+        </div>
+    </div>
+     <div class="call-up-box">
+       <ion-icon name="card-outline"></ion-icon>
+        <div>
+            <h4>Säker betalning</h4>
+            <p>
+                Hos oss kan du köpa lätt och säkert 
+            </p>
+        </div>
+    </div>
+     <div class="call-up-box">
+        <ion-icon name="cash-outline"></ion-icon>
+        <div>
+            <h4>14 dagars returrätt</h4>
+            <p>
+                Efter ditt köp hos oss har du 14 dagars returrätt och vi står för frakten på första returen!
+            </p>
+        </div>
+    </div>
+</section>
+<!--about-->
+<section id="omoss" class="about">
+    <div class="left">
+<div class="promotion about-box">
+    <img src="photos/1bags.jpg" alt="grupp tjejer håller i väskor"/>
+    <div class="description">
+        <h4>Kampanjer * Rabatter</h4>
+        <p>
+            Delta i våra månads kampanjer! Alltid bra pris!
+        </p>
+        <a href="#myid>"
+        >Shoppa nu <ion-icon name="arrow-forward-outline"></ion-icon
+            ></a>
+    </div>
+</div>
+
+<div class="style about-box">
+    <img src="photos/1accessecoarer.jpg" alt="tjej håller upp händer med smycken"/>
+      <div class="description">
+        <h4>trendig stil</h4>
+        <p>
+           Shoppa hos oss och nå en trendig stil! 
+        </p>
+        <a href="#myid>"
+        >Shoppa nu <ion-icon name="arrow-forward-outline"></ion-icon
+            ></a>
+    </div>
+</div>
+    </div>
+    <div class="right">
+<div class="collection about-box">
+    <img src="photos/1collection.jpg" alt="butik med kläder"/>
+      <div class="description">
+        <h4>vinter kollektion</h4>
+        <p>
+            Shoppa vår vinter kollektion för en varm och elagant vinter
+        </p>
+        <a href="#myid>"
+        >Shoppa nu <ion-icon name="arrow-forward-outline"></ion-icon
+            ></a>
+    </div>
+</div>
+<div class="discovery about-box">
+    <img src="photos/2accessecoarer.jpg" alt="lådor med smycken"/>
+      <div class="description">
+        <h4>Modeupptäckt</h4>
+        <p>
+            Upptäck mode för ett bra pris med topp kvalite
+        </p>
+        <a href="#myid>"
+        >Shoppa nu <ion-icon name="arrow-forward-outline"></ion-icon
+            ></a>
+    </div>
+</div>
+    </div>
+</section>
+<br>
+<!--products-->
+<section id="myid>" class="products">
+<!--product filter-->
+<ul id="product-filters">
+<li data-filter="*" class="filter-active">allt</li>
+<li data-filter=".filter-women">dam</li>
+<li data-filter=".filter-men">herr</li>
+<li data-filter=".filter-child">barn</li>
+<li data-filter=".filter-accessoarer">accessoarer</li>
+<li data-filter=".filter-träning">träningskläder</li>
+</ul>
+<br>
+<!--product container-->
+<div class="product-container">
+    <!--product item-->
+    <div class="product-item filter-accessoarer">
+        <span class="hot">HOT</span>
+        <img src="photos/product.bag.jpg" alt="mörkblå väska med fransk text">
+        <div class="prodict-info">
+            <!--rating of 5 stars-->
+        <ul class="product-rating">
+            <li><ion-icon name="star-outline"></ion-icon></li>
+            <li><ion-icon name="star-outline"></ion-icon></li>
+            <li><ion-icon name="star-outline"></ion-icon></li>
+            <li><ion-icon name="star-outline"></ion-icon></li>
+            <li><ion-icon name="star-outline"></ion-icon></li>
+        </ul>
+        <h5>Blå axelväska</h5>
+        <p>
+            <span class="cross"></span>
+            <span class="price">$125.99</span>
+        </p>
+        </div>
+        <a href="#add" class="add-to-bag">
+        <ion-icon name="bag-add-outline"></ion-icon>    
+        </a>
+    </div>
+    <!--duplicate all remaining item cards here-->
+     <div class="product-item filter-women">
+        <span class="hot">HOT</span>
+        <img src="photos/hoodie1.jpg" alt="hoodie med texten all i need is money">
+        <div class="prodict-info">
+            <!--rating of 5 stars-->
+        <ul class="product-rating">
+            <li><ion-icon name="star-outline"></ion-icon></li>
+            <li><ion-icon name="star-outline"></ion-icon></li>
+            <li><ion-icon name="star-outline"></ion-icon></li>
+            <li><ion-icon name="star-outline"></ion-icon></li>
+            <li><ion-icon name="star-outline"></ion-icon></li>
+        </ul>
+        <h5>All we need is money hoodie</h5>
+        <p>
+            <span class="cross"></span>
+            <span class="price">$17.99</span>
+        </p>
+        </div>
+        <a href="#add" class="add-to-bag">
+        <ion-icon name="bag-add-outline"></ion-icon>    
+        </a>
+    </div>
+     <div class="product-item filter-women">
+        <span class="hot">HOT</span>
+        <img src="photos/tshirt1.jpg" alt="tshirt med tänder">
+        <div class="prodict-info">
+            <!--rating of 5 stars-->
+        <ul class="product-rating">
+            <li><ion-icon name="star-outline"></ion-icon></li>
+            <li><ion-icon name="star-outline"></ion-icon></li>
+            <li><ion-icon name="star-outline"></ion-icon></li>
+            <li><ion-icon name="star-outline"></ion-icon></li>
+            <li><ion-icon name="star-outline"></ion-icon></li>
+        </ul>
+        <h5>tshirt grills</h5>
+        <p>
+            <span class="cross"></span>
+            <span class="price">$12.99</span>
+        </p>
+        </div>
+        <a href="#add" class="add-to-bag">
+        <ion-icon name="bag-add-outline"></ion-icon>    
+        </a>
+    </div>
+     <div class="product-item filter-women">
+        <span class="hot">HOT</span>
+        <img src="photos/tshirt5.jpg" alt="tshirt med läppar på">
+        <div class="prodict-info">
+            <!--rating of 5 stars-->
+        <ul class="product-rating">
+            <li><ion-icon name="star-outline"></ion-icon></li>
+            <li><ion-icon name="star-outline"></ion-icon></li>
+            <li><ion-icon name="star-outline"></ion-icon></li>
+            <li><ion-icon name="star-outline"></ion-icon></li>
+            <li><ion-icon name="star-outline"></ion-icon></li>
+        </ul>
+        <h5>Lovisa tshirt</h5>
+        <p>
+            <span class="cross"></span>
+            <span class="price">$11.99</span>
+        </p>
+        </div>
+        <a href="#add" class="add-to-bag">
+        <ion-icon name="bag-add-outline"></ion-icon>    
+        </a>
+    </div>
+     <div class="product-item filter-women">
+        <span class="hot">HOT</span>
+        <img src="photos/hoodie2.jpg" alt="">
+        <div class="prodict-info">
+            <!--rating of 5 stars-->
+        <ul class="product-rating">
+            <li><ion-icon name="star-outline"></ion-icon></li>
+            <li><ion-icon name="star-outline"></ion-icon></li>
+            <li><ion-icon name="star-outline"></ion-icon></li>
+            <li><ion-icon name="star-outline"></ion-icon></li>
+            <li><ion-icon name="star-outline"></ion-icon></li>
+        </ul>
+        <h5>Maja zip up</h5>
+        <p>
+            <span class="cross"></span>
+            <span class="price">$20.99</span>
+        </p>
+        </div>
+        <a href="#add" class="add-to-bag">
+        <ion-icon name="bag-add-outline"></ion-icon>    
+        </a>
+    </div>
+      <div class="product-item filter-men">
+        <span class="hot">HOT</span>
+        <img src="photos/menhoodie.jpg" alt="svart hoodie med murder på">
+        <div class="prodict-info">
+            <!--rating of 5 stars-->
+        <ul class="product-rating">
+            <li><ion-icon name="star-outline"></ion-icon></li>
+            <li><ion-icon name="star-outline"></ion-icon></li>
+            <li><ion-icon name="star-outline"></ion-icon></li>
+            <li><ion-icon name="star-outline"></ion-icon></li>
+            <li><ion-icon name="star-outline"></ion-icon></li>
+        </ul>
+        <h5>Murder hoodie</h5>
+        <p>
+            <span class="cross"></span>
+            <span class="price">$23.49</span>
+        </p>
+        </div>
+        <a href="#add" class="add-to-bag">
+        <ion-icon name="bag-add-outline"></ion-icon>    
+        </a>
+    </div>
+    <div class="product-item filter-men">
+        <span class="hot">HOT</span>
+        <img src="photos/menshirt.jpg" alt="svart och vit tröja med läppar på">
+        <div class="prodict-info">
+            <!--rating of 5 stars-->
+        <ul class="product-rating">
+            <li><ion-icon name="star-outline"></ion-icon></li>
+            <li><ion-icon name="star-outline"></ion-icon></li>
+            <li><ion-icon name="star-outline"></ion-icon></li>
+            <li><ion-icon name="star-outline"></ion-icon></li>
+            <li><ion-icon name="star-outline"></ion-icon></li>
+        </ul>
+        <h5>Vampyr tshirt</h5>
+        <p>
+            <span class="cross"></span>
+            <span class="price">$18.99</span>
+        </p>
+        </div>
+        <a href="#add" class="add-to-bag">
+        <ion-icon name="bag-add-outline"></ion-icon>    
+        </a>
+    </div>
+</div>
+        
+
+</section>
+<!--newsletter signup-->
+<section id="newsletter" class="newsletter">
+<div class="newsletter-box">
+    <ion-icon name="mail-open-outline"></ion-icon>
+    <h5>ANMÄL DIG TILL VÅRT NYHETSBREV!</h5>
+</div>
+<p>
+    säsongsrabatt <span class="discount">20%</span></p>
+    <form>
+        <input type="text" placeholder="Email"/>
+        <input type="submit"/>
+    </form>
+</section>
+<!--contact-->
+<section id="kontaktaoss" class="contact">
+
+    <div class="info-wrap">
+        <div class="info">
+            <ion-icon name="navigate-circle-outline"></ion-icon>
+            <h4>Plats:</h4>  
+            <p>
+                Ekuddsvägen 2b <br/> Stockholm. Sverige
+            </p>
+        </div>
+
+         <div class="info">
+            <ion-icon name="mail-outline"></ion-icon>
+            <h4>Mejla oss här:</h4>  
+            <p>
+                 Jaxfashion@gmail.com <br/> 
+            </p>
+        </div>
+
+         <div class="info">
+            <ion-icon name="call-outline"></ion-icon>
+            <h4>Ring oss:</h4>  
+            <p>
+               123456789  <br/> 987654321
+            </p>
+        </div>
+    </div>
+
+    <form class="contact-form">
+<div class="form-group">
+    <input type="text" placeholder="Your Name" required />
+    <input type="email" placeholder="Your Email" required />
+</div>
+<div class="form-group">
+    <input type="text" placeholder="Subject" required />
+</div>
+<div class="form-group">
+    <textarea name="message" rows="6" placeholder="Message" ></textarea>
+</div>
+<div class="text-center">
+    <button type="submit">Send Message</button>
+</div>
+    </form>
+</section>
+
+
 </main>
+<!--back to top-->
+<a href="#backtotop" class="back-to-top" onclick="scrollToTop();"
+><ion-icon name="arrow-up-outline"></ion-icon>
+    ></a>
+<!--footer-->
+<footer>
+    <ul class="social">
+        <li><a href="#facebook"><ion-icon name="logo-facebook"></ion-icon></a>
+        </li>
+        <li><a href="#insta"><ion-icon name="logo-instagram"></ion-icon></a>
+        </li>
+        <li><a href="#youtube"><ion-icon name="logo-youtube"></ion-icon></a>
+        </li>
+        <li><a class="share" href="#share"
+            ><ion-icon name="share-social-outline"></ion-icon></a>
+        </li>
+    </ul>
+    <ul class="footer-nav">
+        <li><a href="#plats">Butiksplatser</a></li>
+        <li><a href="#öppentid">Öppentider</a></li>
+        <li><a href="#sekretess">Sekretessvillkor</a></li>
+    </ul>
+    <div class="ask-us">
+      <p>Fråga?</p>  
+      <a href="#" class="chat"
+      ><ion-icon name="chatbox-ellipses-outline"></ion-icon>
+      </a>
+    </div>
+    <p>Jaxapparel©all rights reserved</p>
+</footer>
 
 
+
+<script type="module" 
+src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" 
+></script>
+<script 
+nomodule 
+src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+<script src="./js/isotope.js"></script>
+<script src="./script.js"></script>
 </body>
-
-
-  
-</html>
+    </html>
